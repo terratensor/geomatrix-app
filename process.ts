@@ -7,7 +7,7 @@ namespace $ {
 
 	export class $terratensor_geomatrix_process extends $mol_object2 {
 		@$mol_action
-		static auth( creds: { content: string, focus_mode: boolean } ) {
+		static upload( creds: { content: string, focus_mode: boolean, point_in_line: number } ) {
 
 			const res = this.$.$terratensor_geomatrix_transport.save(
 				`upload`,
