@@ -1,0 +1,14 @@
+$terratensor_geomatrix $mol_book2
+	Placeholder null
+	plugins /
+		<= Theme $mol_theme_auto
+	pages /
+		<= View_page $mol_page
+			title_content /
+				<= Logo $mol_image
+					uri \/terratensor/geomatrix/logo/terratensor.png
+					natural_width 24
+					natural_height 24
+				<= title \Геоматрица
+			tools /
+				<= Lights $mol_lights_toggle
