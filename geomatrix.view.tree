@@ -17,6 +17,9 @@ $terratensor_geomatrix $mol_book2
 			body /
 				<= Process $mol_form
 					form_fields /
+						<= Focus_mode $mol_check_box
+							title <= focus_mode_title \Поиск новостей под известное событие
+							checked? <=> focus_mode_enebled? false
 						<= Kml_field $mol_form_field
 							name <= kml_label @ \Скопируйте текст KML файла в это поле
 							bid <= kml_bid \
