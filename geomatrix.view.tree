@@ -7,8 +7,28 @@ $terratensor_geomatrix $mol_book2
 			title_content /
 				<= Logo $mol_image
 					uri \/terratensor/geomatrix/logo/terratensor.png
-					natural_width 24
-					natural_height 24
+					natural_width 28
+					natural_height 28
 				<= title \Геоматрица
 			tools /
 				<= Lights $mol_lights_toggle
+				<= Source $mol_link_source
+					uri \https://github.com/terratensor/geomatrix-app
+			body /
+				<= Process $mol_form
+					form_fields /
+						<= Kml_field $mol_form_field
+							name <= kml_label @ \Скопируйте текст KML файла в это поле
+							bid <= kml_bid \
+							control <= Kml_control $mol_textarea
+								hint \Скопируйте текст KML файла
+								value? <=> kml? \
+					buttons /
+						<= Process_submit $mol_button_download 
+							title <= process_submit_label @ \Обработать
+							event_click? <=> event_submit? null
+							uri <= download? \
+						<= Download $mol_link_iconed
+							uri <= download? \
+
+
